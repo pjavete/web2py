@@ -1,0 +1,18 @@
+{{extend 'layout.html'}}
+
+{{block head}}
+{{end}}
+
+<div class="main_content">
+    <h4>Starred Products</h4>
+  {{for r in rows:}}
+    {{if auth.user is not None and r.star:}}
+        <div class="box">
+            {{=r.name}} <br>
+            Price: {{=r.price}}
+        </div>
+    {{pass}}
+  </div>
+  {{pass}}
+
+</div>
